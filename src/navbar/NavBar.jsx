@@ -118,7 +118,7 @@ const NavContainer = styled.nav`
       display: block;
       margin-left: auto;
       margin-right: auto;
-      top: 10%;
+      top: 15%;
       left: 0;
       right: 0;
       text-align: center;
