@@ -73,7 +73,8 @@
        width: 80vw;
    }
     .container > h2 {
-      width: 80vw;
+      width: 79vw;
+      text-align: center;
       margin-right: 0;
     }
 
