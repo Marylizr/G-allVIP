@@ -86,3 +86,17 @@
       top: -50px;
    }
 }
+
+@media(max-width:667px){
+   .box > a > p{
+      font-size: 10px;
+   }
+
+   .box > img {
+      width: 80vw;
+   }
+
+   .box {
+      background-color: transparent;
+   }
+}
