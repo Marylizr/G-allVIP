@@ -12,7 +12,6 @@ const Home = () => {
       <About />
       <Tours />
       <Contact />
-
     </div>
   )
 }
