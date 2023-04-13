@@ -1,0 +1,123 @@
+.container {
+    color: gray;
+    display: flex;
+    width: 100vw;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 2em;
+}
+
+.pictures {
+    display: flex;
+    width: 100vw;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.pic > a > img {
+    margin-right: 1em;
+    width: 40vw;
+}
+
+.lasvegas {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+}
+
+.lasvegas > h1 {
+    font-size: 120px;
+    color: lightblue;
+    margin: 0.3em;
+}
+
+.lasvegas > p{
+    column-count: 2;
+    margin-bottom: 2em;
+    color: #4ca4d7;
+    font-style: italic;
+}
+
+.lasvegas > img {
+    width: 80vw;
+}
+
+.grandcanyon,  .hoover, .seven {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.grandcanyon > img,  .hoover > img, .seven > img{
+    width: 40vw;
+}
+
+.grandcanyon > p,  .hoover > p, .seven > p{
+    width: 39vw;
+    margin: 1em;
+}
+
+.pictures > a > img {
+    margin-left: 1em;
+}
+
+
+@media (max-width:786px) {
+    .pic > img {
+        width: 80vw;
+        margin-bottom: 1em;
+    }
+    .lasvegas > h1 {
+        font-size: 70px;
+    }
+
+    .lasvegas > p {
+        column-count: 1;
+        text-align: center;
+    }
+
+    .grandcanyon,  .hoover, .seven {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .grandcanyon > p,  .hoover > p, .seven > p {
+        width: 80vw;
+        margin: 0.1em;
+    }
+
+    .grandcanyon > img,  .hoover > img, .seven > img{
+        width: 78vw;
+        margin: 1em;
+    }
+
+    .pictures > a > img {
+        width: 80vw;
+        margin-bottom: 1em;
+        margin-left: 0;
+    }
+    .block {
+        margin-top: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
