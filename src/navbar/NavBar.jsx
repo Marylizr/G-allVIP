@@ -22,7 +22,7 @@ const NavBar = () => {
             <img src={logo} alt='logo'/>
          </div>
          <div className={`links ${clicked ? 'active' : ''}`}>
-            <Link to="/home">Home |</Link>
+            <Link to="/">Home |</Link>
             {/* <Link to="/dashboard">Workouts |</Link> */}
             <Link to="/about">About |</Link>
             <Link to="/tours">Tours |</Link>
