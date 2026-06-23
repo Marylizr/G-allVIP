@@ -18,6 +18,8 @@ export default function DestinationShowcase({ destinations, intro }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [visible, setVisible] = useState(false);
   const [paused, setPaused] = useState(false);
+  const progressWidth = `${100 / destinations.length}%`;
+  const progressLeft = `${activeIndex * (100 / destinations.length)}%`;
 
   useEffect(() => {
     const node = sectionRef.current;
@@ -92,7 +94,7 @@ export default function DestinationShowcase({ destinations, intro }) {
             {destinations.map(({ title, text, image }, index) => (
               <article
                 className={`destination-panel ${getCardPosition(index, activeIndex, destinations.length)}`}
-                key={title}
+                key={`${title}-${image}`}
                 aria-hidden={index !== activeIndex}
               >
                 <Image src={image} alt={title} fill sizes="(max-width: 900px) 82vw, 460px" />
@@ -110,7 +112,7 @@ export default function DestinationShowcase({ destinations, intro }) {
               <ArrowLeft aria-hidden="true" />
             </button>
             <div className="destination-progress" aria-hidden="true">
-              <span style={{ '--progress-index': activeIndex }} />
+              <span style={{ width: progressWidth, left: progressLeft }} />
             </div>
             <button type="button" onClick={showNext} aria-label={intro.nextLabel}>
               <ArrowRight aria-hidden="true" />

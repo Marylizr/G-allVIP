@@ -1,6 +1,9 @@
 import {
+  ArrowUpRight,
+  BedDouble,
   Clock3,
   Headphones,
+  Home,
   MapPin,
   Phone,
   ShieldCheck,
@@ -41,6 +44,68 @@ function CtaButtons({ content, whatsappUrl }) {
   );
 }
 
+function AccommodationSection({ accommodation, whatsappUrl }) {
+  const [mainImage, ...supportImages] = accommodation.images;
+
+  return (
+    <section className="accommodation-section section-light" id="accommodation">
+      <div className="container accommodation-layout">
+        <div className="accommodation-gallery" aria-label={accommodation.title}>
+          <div className="accommodation-main-photo">
+            <Image
+              src={mainImage}
+              alt={accommodation.title}
+              fill
+              sizes="(max-width: 900px) 100vw, 620px"
+            />
+          </div>
+          <div className="accommodation-photo-stack">
+            {supportImages.slice(0, 4).map((image, index) => (
+              <div className="accommodation-thumb" key={image}>
+                <Image
+                  src={image}
+                  alt={`${accommodation.title} ${index + 2}`}
+                  fill
+                  sizes="(max-width: 900px) 45vw, 170px"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="accommodation-copy">
+          <p className="eyebrow">{accommodation.eyebrow}</p>
+          <h2>{accommodation.title}</h2>
+          <p>{accommodation.text}</p>
+          <div className="accommodation-features">
+            {accommodation.features.map((feature, index) => {
+              const Icon = [Home, BedDouble, MapPin][index] || ShieldCheck;
+
+              return (
+                <span key={feature}>
+                  <Icon aria-hidden="true" />
+                  {feature}
+                </span>
+              );
+            })}
+          </div>
+          <p className="accommodation-note">{accommodation.note}</p>
+          <div className="accommodation-actions">
+            <a className="button button-primary compact" href={accommodation.link} target="_blank" rel="noreferrer">
+              {accommodation.button}
+              <ArrowUpRight size={18} aria-hidden="true" />
+            </a>
+            <a className="button button-dark compact" href={whatsappUrl} target="_blank" rel="noreferrer">
+              <Phone size={18} aria-hidden="true" />
+              {phone}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function LandingPage({ content }) {
   const whatsappUrl = buildWhatsappUrl(content.labels.phoneMessage);
 
@@ -70,7 +135,7 @@ export default function LandingPage({ content }) {
           <div className="container hero-content">
             <div className="hero-copy">
               <p className="eyebrow">{content.hero.eyebrow}</p>
-              <h1 className="hero-title" aria-label={content.hero.aria}>
+              <h1 className="hero-title" data-locale={content.locale} aria-label={content.hero.aria}>
                 {content.hero.title.map((line) => (
                   <span key={line} style={{ '--characters': line.length }}>
                     {line}
@@ -114,6 +179,8 @@ export default function LandingPage({ content }) {
         </section>
 
         <DestinationShowcase destinations={content.destinations} intro={content.destinationsIntro} />
+
+        <AccommodationSection accommodation={content.accommodation} whatsappUrl={whatsappUrl} />
 
         <section className="why-section section-light" id="about">
           <div className="container why-layout">

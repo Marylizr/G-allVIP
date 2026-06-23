@@ -2,12 +2,37 @@ export const sharedImages = {
   hero:
     'https://res.cloudinary.com/da6il8qmv/image/upload/v1681051866/ScenicByway_Desktop-1536x863_djnhrh.jpg',
   grandCanyon:
-    'https://res.cloudinary.com/da6il8qmv/image/upload/c_scale,w_370/v1681051865/grandC2_d3rld0.jpg',
+    'https://res.cloudinary.com/da6il8qmv/image/upload/v1782240975/grandC3_pwrzqh.png',
+  grandCanyonClassic:
+    'https://res.cloudinary.com/da6il8qmv/image/upload/v1681051866/grandC_pra0gu.jpg',
   hooverDam:
-    'https://res.cloudinary.com/da6il8qmv/image/upload/c_scale,w_370/v1681136935/hooverD2_ujivo0.jpg',
+    'https://res.cloudinary.com/da6il8qmv/image/upload/v1782240946/hooverD2_ujivo0.png',
+  hooverDamView:
+    'https://res.cloudinary.com/da6il8qmv/image/upload/v1782240960/hooverD_jivlff.png',
+  hooverDamBridge:
+    'https://res.cloudinary.com/da6il8qmv/image/upload/v1782241022/hooverD2_pwyadv.png',
   sevenMagic:
-    'https://res.cloudinary.com/da6il8qmv/image/upload/c_scale,w_370/v1681137177/magicM1_bjfpws.jpg'
+    'https://res.cloudinary.com/da6il8qmv/image/upload/v1782241002/magicM1_bjfpws.png',
+  sevenMagicClose:
+    'https://res.cloudinary.com/da6il8qmv/image/upload/v1782241070/magicM1_inxo9i.png',
+  lasVegasStrip:
+    'https://res.cloudinary.com/da6il8qmv/image/upload/v1782240926/las-vegas-strip-tour-scaled_eojl67.png',
+  scenicByway:
+    'https://res.cloudinary.com/da6il8qmv/image/upload/v1782240991/ScenicByway_Desktop-1536x863_djnhrh.png',
+  highRoller:
+    'https://res.cloudinary.com/da6il8qmv/image/upload/v1782241037/romantic-las-vegas-high-roller_ljqdqw.png',
+  accommodation: [
+    '/Screenshot 2026-06-23 at 20.29.50.png',
+    '/Screenshot 2026-06-23 at 20.28.43.png',
+    '/Screenshot 2026-06-23 at 20.28.49.png',
+    '/Screenshot 2026-06-23 at 20.28.01.png',
+    '/Screenshot 2026-06-23 at 20.28.07.png',
+    '/Screenshot 2026-06-23 at 20.28.14.png'
+  ]
 };
+
+const accommodationUrl =
+  'https://es-l.airbnb.com/rooms/1237941464571848956?unique_share_id=24be9652-d6f8-4e8e-a60e-ce85ff6d170e&viralityEntryPoint=1&s=76&source_impression_id=p3_1782242829_P3ffVC_X4G63OTCJ';
 
 export const siteContent = {
   en: {
@@ -20,6 +45,7 @@ export const siteContent = {
       ['Home', '#home'],
       ['Services', '#services'],
       ['Destinations', '#destinations'],
+      ['Accommodation', '#accommodation'],
       ['About Us', '#about'],
       ['Contact', '#contact']
     ],
@@ -84,14 +110,49 @@ export const siteContent = {
         image: sharedImages.grandCanyon
       },
       {
+        title: 'Grand Canyon Views',
+        text: 'Take in dramatic desert overlooks and unforgettable canyon scenery.',
+        image: sharedImages.grandCanyonClassic
+      },
+      {
         title: 'Hoover Dam',
         text: 'An engineering marvel you cannot miss.',
         image: sharedImages.hooverDam
       },
       {
+        title: 'Hoover Dam Lookout',
+        text: 'Enjoy impressive views of the dam, bridge, and surrounding desert.',
+        image: sharedImages.hooverDamView
+      },
+      {
+        title: 'Hoover Dam Bridge',
+        text: 'A memorable stop with panoramic views near the Nevada-Arizona border.',
+        image: sharedImages.hooverDamBridge
+      },
+      {
         title: 'Seven Magic Mountain',
         text: 'A unique and vibrant art installation.',
         image: sharedImages.sevenMagic
+      },
+      {
+        title: 'Seven Magic Mountains',
+        text: 'Colorful desert art made for a quick, iconic Las Vegas photo stop.',
+        image: sharedImages.sevenMagicClose
+      },
+      {
+        title: 'Las Vegas Strip',
+        text: 'Cruise the city lights, resorts, and signature Las Vegas landmarks.',
+        image: sharedImages.lasVegasStrip
+      },
+      {
+        title: 'Scenic Byway',
+        text: 'Relax on a comfortable private ride through unforgettable desert roads.',
+        image: sharedImages.scenicByway
+      },
+      {
+        title: 'High Roller',
+        text: "Add a romantic Las Vegas view from one of the city's most famous attractions.",
+        image: sharedImages.highRoller
       }
     ],
     why: {
@@ -103,6 +164,17 @@ export const siteContent = {
         ['100% Personalized', 'Services tailored to your needs and schedule.'],
         ['24/7 Support', 'We are available to assist you at any time.']
       ]
+    },
+    accommodation: {
+      eyebrow: 'Stay with us',
+      title: 'Private Las Vegas accommodation for your VIP trip',
+      text:
+        'Pair your transportation with a comfortable apartment stay and keep your Las Vegas plans simple from arrival to checkout.',
+      button: 'View Airbnb',
+      note: 'Ask us about ride coordination, airport pickup, and local stops during your stay.',
+      link: accommodationUrl,
+      images: sharedImages.accommodation,
+      features: ['Apartment stay', 'VIP ride coordination', 'Las Vegas location']
     },
     contact: {
       title: 'Ready to elevate your travel experience?',
@@ -134,6 +206,7 @@ export const siteContent = {
       ['Inicio', '#home'],
       ['Servicios', '#services'],
       ['Destinos', '#destinations'],
+      ['Alojamiento', '#accommodation'],
       ['Nosotros', '#about'],
       ['Contacto', '#contact']
     ],
@@ -199,14 +272,49 @@ export const siteContent = {
         image: sharedImages.grandCanyon
       },
       {
+        title: 'Vistas del Grand Canyon',
+        text: 'Disfruta miradores del desierto y paisajes inolvidables del canyon.',
+        image: sharedImages.grandCanyonClassic
+      },
+      {
         title: 'Hoover Dam',
         text: 'Una obra de ingenieria que no te puedes perder.',
         image: sharedImages.hooverDam
       },
       {
+        title: 'Mirador de Hoover Dam',
+        text: 'Vistas impresionantes de la represa, el puente y el desierto.',
+        image: sharedImages.hooverDamView
+      },
+      {
+        title: 'Puente de Hoover Dam',
+        text: 'Una parada memorable con vistas panoramicas cerca de Nevada y Arizona.',
+        image: sharedImages.hooverDamBridge
+      },
+      {
         title: 'Seven Magic Mountain',
         text: 'Una instalacion artistica unica y llena de color.',
         image: sharedImages.sevenMagic
+      },
+      {
+        title: 'Seven Magic Mountains',
+        text: 'Arte colorido en el desierto para una parada iconica cerca de Las Vegas.',
+        image: sharedImages.sevenMagicClose
+      },
+      {
+        title: 'Las Vegas Strip',
+        text: 'Recorre las luces, hoteles y puntos mas famosos de Las Vegas.',
+        image: sharedImages.lasVegasStrip
+      },
+      {
+        title: 'Scenic Byway',
+        text: 'Disfruta un viaje privado y comodo por rutas inolvidables del desierto.',
+        image: sharedImages.scenicByway
+      },
+      {
+        title: 'High Roller',
+        text: 'Agrega una vista romantica de Las Vegas desde una atraccion famosa.',
+        image: sharedImages.highRoller
       }
     ],
     why: {
@@ -218,6 +326,17 @@ export const siteContent = {
         ['100% personalizado', 'Servicios adaptados a tus necesidades y horario.'],
         ['Soporte 24/7', 'Estamos disponibles para ayudarte en todo momento.']
       ]
+    },
+    accommodation: {
+      eyebrow: 'Hospedaje VIP',
+      title: 'Apartamento en Las Vegas para completar tu viaje',
+      text:
+        'Combina tu transporte privado con una estadia comoda y organiza tus planes de Las Vegas desde la llegada hasta el checkout.',
+      button: 'Ver Airbnb',
+      note: 'Consultanos por traslados, recogida en aeropuerto y paradas locales durante tu estadia.',
+      link: accommodationUrl,
+      images: sharedImages.accommodation,
+      features: ['Apartamento privado', 'Coordinacion VIP', 'Ubicacion en Las Vegas']
     },
     contact: {
       title: 'Listo para elevar tu experiencia de viaje?',
