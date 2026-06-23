@@ -1,16 +1,12 @@
 'use client';
 
-import { Menu, Phone, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
 import { useState } from 'react';
 import logoImage from '@/assets/logo.png';
 
 export default function Header({
-  phone,
-  whatsappUrl,
   navItems,
-  requestLabel,
-  smsLabel,
   currentLocale,
   languageLinks
 }) {
@@ -40,16 +36,6 @@ export default function Header({
         </nav>
 
         <div className="header-actions">
-          <a className="phone-link" href={whatsappUrl} target="_blank" rel="noreferrer">
-            <Phone size={18} aria-hidden="true" />
-            <span>
-              {phone}
-              <small>{smsLabel}</small>
-            </span>
-          </a>
-          <a className="request-link" href="#contact">
-            {requestLabel}
-          </a>
           <div className="language-switch" aria-label="Language selector">
             <a className={currentLocale === 'en' ? 'is-active' : ''} href={languageLinks.en}>
               EN

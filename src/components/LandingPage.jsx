@@ -113,11 +113,7 @@ export default function LandingPage({ content }) {
     <>
       <DocumentLanguage locale={content.locale} />
       <Header
-        phone={phone}
-        whatsappUrl={whatsappUrl}
         navItems={content.nav}
-        requestLabel={content.labels.requestService}
-        smsLabel={content.labels.sms}
         currentLocale={content.locale}
         languageLinks={content.languageLinks}
       />
