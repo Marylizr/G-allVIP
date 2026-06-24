@@ -22,12 +22,12 @@ export const sharedImages = {
   highRoller:
     'https://res.cloudinary.com/da6il8qmv/image/upload/v1782241037/romantic-las-vegas-high-roller_ljqdqw.png',
   accommodation: [
-    '/Screenshot 2026-06-23 at 20.29.50.png',
-    '/Screenshot 2026-06-23 at 20.28.43.png',
-    '/Screenshot 2026-06-23 at 20.28.49.png',
-    '/Screenshot 2026-06-23 at 20.28.01.png',
-    '/Screenshot 2026-06-23 at 20.28.07.png',
-    '/Screenshot 2026-06-23 at 20.28.14.png'
+    '/airbnb.png',
+    '/Screenshot%202026-06-23%20at%2020.28.43.png',
+    '/Screenshot%202026-06-23%20at%2020.28.49.png',
+    '/Screenshot%202026-06-23%20at%2020.28.01.png',
+    '/Screenshot%202026-06-23%20at%2020.28.07.png',
+    '/Screenshot%202026-06-23%20at%2020.28.14.png'
   ]
 };
 
